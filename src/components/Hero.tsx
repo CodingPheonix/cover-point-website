@@ -45,9 +45,13 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white font-display leading-[1.15] sm:leading-[1.1] break-words">
-              Engineered <span className="text-gradient-cyan">Protection.</span><br className="hidden sm:inline" />
-              Uncompromising <span className="text-gradient-blue">Aesthetics.</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white font-display leading-[1.2] sm:leading-[1.1] whitespace-normal">
+              <span className="block">
+                Engineered <span className="text-gradient-cyan">Protection.</span>
+              </span>
+              <span className="block mt-1 sm:mt-2">
+                Uncompromising <span className="text-gradient-blue">Aesthetics.</span>
+              </span>
             </h1>
 
             {/* Sub-description emphasizing offline experience */}
@@ -106,19 +110,19 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
           </div>
 
           {/* Right Column: High-End Rolling Mobile Backcovers Showcase ($10,000 look) */}
-          <div className="lg:col-span-5 relative flex items-center justify-center pt-4 lg:pt-0">
+          <div className="lg:col-span-5 relative flex items-center justify-center pt-8 pb-12 sm:pt-6 sm:pb-8 lg:py-0 px-4 sm:px-6">
             
             {/* Glowing Backdrop Circle */}
-            <div className="w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px] rounded-full border border-blue-500/20 bg-gradient-to-b from-blue-900/10 to-transparent flex items-center justify-center relative">
+            <div className="w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px] rounded-full border border-blue-500/20 bg-gradient-to-b from-blue-900/10 to-transparent flex items-center justify-center relative">
               <div className="absolute inset-4 rounded-full border border-cyan-500/15 animate-[spin_30s_linear_infinite]" />
               <div className="absolute -inset-2 rounded-full border border-dashed border-blue-400/20 animate-[spin_40s_linear_infinite_reverse]" />
               
-              {/* Rolling 3D Phone Cover Container */}
-              <div className="perspective-1000 w-56 h-[380px] sm:w-64 sm:h-[440px] lg:w-72 lg:h-[480px] relative preserve-3d flex items-center justify-center">
+              {/* Rolling 3D Phone Cover Container with generous padding so badges and 3D angle never clip */}
+              <div className="perspective-1000 w-60 h-[400px] sm:w-64 sm:h-[440px] lg:w-72 lg:h-[480px] relative preserve-3d flex items-center justify-center my-4">
                 
                 {/* 3D Phone Case with Rolling / Spin Dynamics */}
                 <div 
-                  className={`w-52 h-[360px] sm:w-60 sm:h-[420px] lg:w-64 lg:h-[450px] rounded-[36px] sm:rounded-[42px] p-2.5 sm:p-3 shadow-2xl transition-transform duration-700 preserve-3d cursor-pointer ${
+                  className={`w-48 h-[340px] xs:w-52 xs:h-[360px] sm:w-60 sm:h-[420px] lg:w-64 lg:h-[450px] rounded-[32px] sm:rounded-[42px] p-2.5 sm:p-3 shadow-2xl transition-transform duration-700 preserve-3d cursor-pointer ${
                     isRotatingManually ? '' : 'animate-rolling-cover'
                   }`}
                   style={
@@ -137,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
                   title="Click to toggle continuous rolling or manual angle"
                 >
                   {/* Outer Rim Armor */}
-                  <div className="w-full h-full rounded-[30px] sm:rounded-[36px] bg-gradient-to-b from-[#1C1C28] via-[#101018] to-[#0A0A0E] border-2 border-cyan-400/40 shadow-glow-cyan p-2 sm:p-2.5 flex flex-col justify-between relative overflow-hidden">
+                  <div className="w-full h-full rounded-[26px] sm:rounded-[36px] bg-gradient-to-b from-[#1C1C28] via-[#101018] to-[#0A0A0E] border-2 border-cyan-400/40 shadow-glow-cyan p-2 sm:p-2.5 flex flex-col justify-between relative overflow-hidden">
                     
                     {/* Metallic Camera Island Highlight */}
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#1E293B] via-[#0F172A] to-black border border-white/20 p-1.5 sm:p-2 shadow-inner self-start ml-2 mt-2 relative">
@@ -178,7 +182,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
                 </div>
 
                 {/* Floating Interactive Badge 1: Instant Alignment */}
-                <div className="absolute -left-2 sm:-left-6 top-4 sm:top-8 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#161622]/95 border border-white/15 backdrop-blur-md shadow-2xl flex items-center gap-2 sm:gap-3 animate-float-slow max-w-[150px] sm:max-w-none">
+                <div className="absolute -left-1 sm:-left-6 top-2 sm:top-8 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#161622]/95 border border-white/15 backdrop-blur-md shadow-2xl flex items-center gap-2 sm:gap-3 animate-float-slow max-w-[155px] sm:max-w-none z-10">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-blue-600/30 border border-blue-500/50 flex items-center justify-center text-blue-400 flex-shrink-0">
                     <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
@@ -189,7 +193,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
                 </div>
 
                 {/* Floating Interactive Badge 2: Express Repair */}
-                <div className="absolute -right-2 sm:-right-6 bottom-10 sm:bottom-12 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#161622]/95 border border-white/15 backdrop-blur-md shadow-2xl flex items-center gap-2 sm:gap-3 animate-float-delayed max-w-[150px] sm:max-w-none">
+                <div className="absolute -right-1 sm:-right-6 bottom-8 sm:bottom-12 p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#161622]/95 border border-white/15 backdrop-blur-md shadow-2xl flex items-center gap-2 sm:gap-3 animate-float-delayed max-w-[155px] sm:max-w-none z-10">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-cyan-600/30 border border-cyan-500/50 flex items-center justify-center text-cyan-400 flex-shrink-0">
                     <Cpu className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
@@ -200,7 +204,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
                 </div>
 
                 {/* Interactive Angle Switchers */}
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-1 p-1 rounded-xl bg-black/80 border border-white/10 backdrop-blur-md z-20 shadow-lg">
+                <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-1 p-1 rounded-xl bg-black/90 border border-white/15 backdrop-blur-md z-20 shadow-xl">
                   <button
                     onClick={() => {
                       setIsRotatingManually(false);
