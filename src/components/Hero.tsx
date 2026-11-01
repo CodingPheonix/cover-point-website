@@ -39,9 +39,13 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToReachUs }) => {
           <div className="lg:col-span-7 text-center lg:text-left space-y-5 sm:space-y-6">
             
             {/* Store Status Chip */}
-            <div className="inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-300 text-[11px] sm:text-xs font-semibold backdrop-blur-md shadow-glow-sm max-w-full">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-300 text-[10px] sm:text-xs font-semibold backdrop-blur-md shadow-glow-sm max-w-full">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping flex-shrink-0" />
-              <span className="tracking-wide truncate">OFFLINE STORE • OPEN TODAY 10:30 AM - 9:30 PM</span>
+              <span className="tracking-wide text-left flex flex-wrap items-center gap-x-1.5 sm:gap-x-2">
+                <span className="whitespace-nowrap">OFFLINE STORE</span>
+                <span className="text-cyan-400/60 hidden xs:inline">•</span>
+                <span className="whitespace-nowrap text-cyan-300">OPEN TODAY 10:30 AM - 9:30 PM</span>
+              </span>
             </div>
 
             {/* Main Headline */}

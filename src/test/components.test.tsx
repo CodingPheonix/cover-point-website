@@ -151,7 +151,8 @@ describe('UI Components', () => {
   describe('Hero Component', () => {
     it('displays the updated store status chip without Cyber Hub', () => {
       render(<Hero onScrollToReachUs={vi.fn()} />);
-      expect(screen.getByText(/OFFLINE STORE • OPEN TODAY 10:30 AM - 9:30 PM/i)).toBeInTheDocument();
+      expect(screen.getByText(/OFFLINE STORE/i)).toBeInTheDocument();
+      expect(screen.getByText(/OPEN TODAY 10:30 AM - 9:30 PM/i)).toBeInTheDocument();
       expect(screen.queryByText(/CYBER HUB/i)).not.toBeInTheDocument();
     });
 

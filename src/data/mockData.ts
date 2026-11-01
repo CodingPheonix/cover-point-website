@@ -4,7 +4,7 @@ export const STORE_INFO: StoreInfo = {
   name: "Cover Point",
   tagline: "Where Premium Device Protection Meets High-End Aesthetic",
   phone: "+91 98765 43210",
-  whatsapp: "+919876543210",
+  whatsapp: "+919051410466",
   address: "Near Mecheda Central Bus Stand, Station Road, Mecheda",
   landmark: "Directly Opposite Mecheda Central Bus Stand (Near Railway Station)",
   city: "Mecheda, Purba Medinipur, West Bengal",
